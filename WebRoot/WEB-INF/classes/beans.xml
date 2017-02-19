@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="addr" class="com.cbt.bean.Address">
+    	<property name="addr" value="上海"></property>
+    </bean>
+	<bean id="stu" class="com.cbt.bean.Student">
+		<property name="name" value="张三"></property>
+		<property name="addr" ref="addr"></property>
+		<property name="books">
+			<array>
+				<value>笑傲江湖</value>
+				<value>射雕英雄传</value>
+				<value>鹿鼎记</value>
+			</array>
+		</property>
+		<property name="hobbies">
+			<list>
+				<value>游泳</value>
+				<value>射箭</value>
+				<value>台球</value>
+			</list>
+		</property>
+		<property name="gradeMap">
+			<map>
+				<entry key="Math"><value>80</value></entry>
+				<entry key="English"><value>90</value></entry>
+				<entry key="Chinese"><value>100</value></entry>
+			</map>
+		</property>
+		<property name="games">
+			<set>
+				<value>lol</value>
+				<value>cf</value>
+				<value>dnf</value>
+			</set>
+		</property>
+		<property name="wife"><null></null></property>
+		<property name="info">
+			<props>
+				<prop key="stuno">876876</prop>
+				<prop key="sex">男</prop>
+				<prop key="isGraduate">false</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
